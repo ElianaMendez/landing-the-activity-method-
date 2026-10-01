@@ -1,0 +1,451 @@
+<style>
+#tam-landing {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1a202c;
+  line-height: 1.6;
+  background-color: #fcfaf8;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+#tam-landing * { box-sizing: border-box; }
+#tam-landing h1, #tam-landing h2, #tam-landing h3, #tam-landing h4 {
+  color: #0A192F;
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+#tam-landing .tam-section {
+  padding: 80px 20px;
+}
+#tam-landing .tam-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#tam-landing .tam-section-bg-white { background-color: #ffffff; }
+#tam-landing .tam-section-bg-navy { background-color: #0A192F; color: #ffffff; }
+#tam-landing .tam-section-bg-navy h2, 
+#tam-landing .tam-section-bg-navy h3 { color: #ffffff; }
+#tam-landing p { font-size: 1.125rem; margin-bottom: 1.5rem; color: #334155; }
+#tam-landing .tam-section-bg-navy p { color: #cbd5e1; }
+#tam-landing .tam-btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+#tam-landing .tam-btn:hover { background-color: #1d4ed8; color: #ffffff; }
+#tam-landing .tam-microcopy { font-size: 0.875rem; color: #64748b; margin-top: 12px; display: block; }
+#tam-landing .tam-section-bg-navy .tam-microcopy { color: #94a3b8; }
+#tam-landing .tam-grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+#tam-landing .tam-grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px; align-items: center; }
+#tam-landing .tam-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+#tam-landing .tam-tag { background: #eff6ff; color: #1e3a8a; padding: 6px 14px; border-radius: 16px; font-size: 0.875rem; font-weight: 600; display: inline-block; margin-bottom: 20px; border: 1px solid #bfdbfe; }
+#tam-landing .tam-badge-primary { background: #eff6ff; color: #1d4ed8; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+#tam-landing .tam-badge-secondary { background: #f1f5f9; color: #475569; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+#tam-landing .tam-badge-success { background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+
+#tam-landing .tam-hero { text-align: center; padding: 100px 20px 80px; }
+#tam-landing .tam-hero h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 24px; line-height: 1.1; }
+#tam-landing .tam-hero p { font-size: 1.25rem; max-width: 650px; margin: 0 auto 40px; color: #475569;}
+#tam-landing .tam-eyebrow { font-weight: 700; color: #2563eb; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.875rem; margin-bottom: 16px; display: block; }
+#tam-landing .tam-center { text-align: center; }
+#tam-landing .tam-section-header { max-width: 750px; margin: 0 auto 56px; text-align: center; }
+#tam-landing .tam-section-header h2 { font-size: 2.5rem; letter-spacing: -0.5px; margin-bottom: 20px; }
+
+#tam-landing .tam-mockup { border-radius: 12px; border: 1px solid #e2e8f0; background: #fff; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.06); width: 100%; }
+#tam-landing .tam-mockup-header { background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 12px 16px; display: flex; gap: 6px; }
+#tam-landing .tam-mockup-dot { width: 10px; height: 10px; border-radius: 50%; background: #cbd5e1; }
+#tam-landing .tam-mockup-content { padding: 32px; }
+
+#tam-landing .tam-match-item { padding: 24px 0; border-bottom: 1px solid #f1f5f9; display: flex; flex-direction: column; align-items: flex-start;}
+#tam-landing .tam-match-item:last-child { border-bottom: none; padding-bottom: 0; }
+#tam-landing .tam-match-title { font-size: 1.125rem; font-weight: 700; color: #0A192F; margin-bottom: 8px; margin-top: 4px; }
+#tam-landing .tam-match-meta { font-size: 0.875rem; color: #64748b; display: flex; gap: 16px; flex-wrap: wrap; }
+#tam-landing .tam-match-meta span { display: inline-flex; align-items: center; background: #f8fafc; padding: 4px 8px; border-radius: 4px; border: 1px solid #e2e8f0;}
+
+#tam-landing .tam-faq-grid { max-width: 800px; margin: 0 auto; }
+#tam-landing .tam-faq-item { border-bottom: 1px solid #e2e8f0; padding: 24px 0; }
+#tam-landing .tam-faq-item:last-child { border-bottom: none; }
+#tam-landing .tam-faq-item h3 { font-size: 1.125rem; margin-bottom: 12px; color: #0A192F; }
+#tam-landing .tam-faq-item p { margin: 0; font-size: 1rem; color: #475569;}
+
+#tam-landing .tam-check-list { list-style: none; padding: 0; margin: 0 0 32px 0; }
+#tam-landing .tam-check-list li { padding-left: 28px; position: relative; margin-bottom: 14px; font-size: 1.125rem; color: #334155; }
+#tam-landing .tam-check-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: #2563eb; font-weight: bold; }
+
+#tam-landing .tam-step-card { text-align: center; padding: 40px 24px; border-radius: 12px; background: #fff; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);}
+#tam-landing .tam-step-number { font-size: 0.875rem; font-weight: 700; color: #2563eb; letter-spacing: 1px; margin-bottom: 16px; display: block; }
+#tam-landing .tam-step-title { font-size: 1.5rem; margin-bottom: 16px; }
+
+#tam-landing .tam-detail-row { display: grid; grid-template-columns: 120px 1fr; gap: 16px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #f1f5f9;}
+#tam-landing .tam-detail-label { font-weight: 600; color: #64748b; font-size: 0.875rem;}
+#tam-landing .tam-detail-value { color: #0A192F; font-size: 0.95rem; font-weight: 500;}
+
+#tam-landing .tam-case-card { padding: 24px; background: #f8fafc; border-radius: 8px; border-left: 4px solid #2563eb; font-style: italic; color: #0A192F; font-weight: 500;}
+
+@media (max-width: 768px) {
+  #tam-landing .tam-hero h1 { font-size: 2.5rem; }
+  #tam-landing .tam-section-header h2 { font-size: 2rem; }
+  #tam-landing .tam-section { padding: 56px 20px; }
+  #tam-landing .tam-grid-2 { grid-template-columns: 1fr; gap: 40px; }
+  #tam-landing .tam-btn { width: 100%; }
+  #tam-landing .tam-detail-row { grid-template-columns: 1fr; gap: 4px; }
+  #tam-landing .tam-detail-label { margin-bottom: 2px;}
+}
+</style>
+
+<div id="tam-landing">
+  <!-- SECTION 1 — HERO -->
+  <section class="tam-section tam-hero">
+    <div class="tam-container">
+      <span class="tam-eyebrow">The Activity Method™</span>
+      <h1>Stop searching for activities.<br>Start with the right one.</h1>
+      <p>A practical activity-selection system that helps you find relevant activities based on the person, goal, time and materials you have available.</p>
+      <a href="https://activity-method.systeme.io/checkout" class="tam-btn">Get Instant Access — $35</a>
+      <span class="tam-microcopy">One-time payment · Instant digital access · 7-day refund policy</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — PROBLEM -->
+  <section class="tam-section tam-section-bg-white">
+    <div class="tam-container tam-center">
+      <div class="tam-section-header">
+        <h2>You don't need more activities.<br>You need a better way to choose them.</h2>
+        <p>Searching online. Scrolling through saved files. Trying to remember what worked last time. Combining unrelated activities. Trying to adapt something at the last minute.</p>
+        <p style="font-weight: 600; color: #0A192F; margin-top: 24px;">The Activity Method™ gives you a more practical starting point.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — HOW IT WORKS -->
+  <section class="tam-section">
+    <div class="tam-container">
+      <div class="tam-section-header">
+        <h2>From "What should I do today?"<br>to three relevant options.</h2>
+      </div>
+      <div class="tam-grid-3">
+        <div class="tam-step-card">
+          <span class="tam-step-number">01</span>
+          <h3 class="tam-step-title">SELECT</h3>
+          <p style="margin: 0; font-size: 1rem;">Tell the system what you need.</p>
+        </div>
+        <div class="tam-step-card">
+          <span class="tam-step-number">02</span>
+          <h3 class="tam-step-title">ADAPT</h3>
+          <p style="margin: 0; font-size: 1rem;">Choose an activity that fits the person, goal, time and materials.</p>
+        </div>
+        <div class="tam-step-card">
+          <span class="tam-step-number">03</span>
+          <h3 class="tam-step-title">USE</h3>
+          <p style="margin: 0; font-size: 1rem;">Open the activity and follow the instructions.</p>
+        </div>
+      </div>
+      <div class="tam-center" style="margin-top: 48px;">
+        <span style="font-weight: 700; letter-spacing: 1.5px; color: #64748b; font-size: 1.125rem;">SELECT → ADAPT → USE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — THE ACTIVITY FINDER -->
+  <section class="tam-section tam-section-bg-white">
+    <div class="tam-container">
+      <div class="tam-grid-2">
+        <div>
+          <h2 style="font-size: 2rem; margin-bottom: 24px;">Tell us what you need.<br>We'll narrow it down.</h2>
+          <p>The activity finder considers practical variables such as participation, goal, time, and materials.</p>
+          <p>Answer a few practical questions to filter out what doesn't fit your immediate situation.</p>
+        </div>
+        <div>
+          <!-- SYSTEME_IMAGE_01: PRODUCT_SELECTOR_SCREENSHOT -->
+          <div class="tam-mockup">
+            <div class="tam-mockup-header">
+              <div class="tam-mockup-dot" style="background:#fecdd3;"></div>
+              <div class="tam-mockup-dot" style="background:#fde68a;"></div>
+              <div class="tam-mockup-dot" style="background:#a7f3d0;"></div>
+            </div>
+            <div class="tam-mockup-content" style="background: #f8fafc;">
+              <h4 style="font-size: 1rem; margin-bottom: 16px; color: #475569;">Find an Activity</h4>
+              <div style="background: #fff; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 12px; font-size: 0.9rem; color: #64748b;">Participation: <strong style="color: #0A192F;">Seated</strong></div>
+              <div style="background: #fff; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 12px; font-size: 0.9rem; color: #64748b;">Goal: <strong style="color: #0A192F;">Movement</strong></div>
+              <div style="background: #fff; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 12px; font-size: 0.9rem; color: #64748b;">Time: <strong style="color: #0A192F;">5-10 min</strong></div>
+              <div style="background: #2563eb; color: #fff; text-align: center; padding: 12px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; margin-top: 24px;">Show Matches</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — THREE MATCHES -->
+  <section class="tam-section">
+    <div class="tam-container">
+      <div class="tam-section-header">
+        <h2>Get three relevant activity matches.</h2>
+        <p>Instead of browsing a huge list, the system gives you a short list of activities that match your selections.</p>
+      </div>
+      <div style="max-width: 600px; margin: 0 auto;">
+         <!-- SYSTEME_IMAGE_02: THREE_MATCHES_SCREENSHOT -->
+        <div class="tam-mockup">
+          <div class="tam-mockup-header">
+            <div class="tam-mockup-dot"></div>
+            <div class="tam-mockup-dot"></div>
+            <div class="tam-mockup-dot"></div>
+          </div>
+          <div class="tam-mockup-content">
+            <h4 style="margin-bottom: 24px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; color: #64748b;">Your Best Matches</h4>
+            
+            <div class="tam-match-item">
+              <span class="tam-badge-success">Strong Match</span>
+              <div class="tam-match-title">Overhead Reach and Pull</div>
+              <div class="tam-match-meta">
+                <span>Category: Movement</span>
+                <span>Time: 5 min</span>
+                <span>Participation: Seated</span>
+              </div>
+            </div>
+
+            <div class="tam-match-item">
+              <span class="tam-badge-secondary">Good Alternative</span>
+              <div class="tam-match-title">Seated Torso Twists</div>
+              <div class="tam-match-meta">
+                <span>Category: Movement</span>
+                <span>Time: 5 min</span>
+                <span>Participation: Seated</span>
+              </div>
+            </div>
+
+            <div class="tam-match-item" style="border-bottom: none; padding-bottom: 0;">
+              <span class="tam-badge-secondary">Good Alternative</span>
+              <div class="tam-match-title">Seated Marching</div>
+              <div class="tam-match-meta">
+                <span>Category: Movement</span>
+                <span>Time: 10 min</span>
+                <span>Participation: Seated</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — ACTIVITY DETAIL -->
+  <section class="tam-section tam-section-bg-white">
+    <div class="tam-container">
+      <div class="tam-grid-2">
+        <div style="order: 2;">
+          <h2 style="font-size: 2rem; margin-bottom: 24px;">Every activity gives you more than an idea.</h2>
+          <p>Detailed activity instructions built for real-world application, complete with setup and safety guidance.</p>
+        </div>
+        <div style="order: 1;">
+          <!-- SYSTEME_IMAGE_03: ACTIVITY_DETAIL_SCREENSHOT -->
+          <div class="tam-mockup">
+            <div class="tam-mockup-header"></div>
+            <div class="tam-mockup-content" style="padding: 24px;">
+              <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 24px; color: #0A192F;">Overhead Reach and Pull</h4>
+              
+              <div class="tam-detail-row">
+                <div class="tam-detail-label">Best For</div>
+                <div class="tam-detail-value">Upper body mobility</div>
+              </div>
+              <div class="tam-detail-row">
+                <div class="tam-detail-label">Time</div>
+                <div class="tam-detail-value">5 min</div>
+              </div>
+              <div class="tam-detail-row">
+                <div class="tam-detail-label">Materials</div>
+                <div class="tam-detail-value">Resistance band (optional)</div>
+              </div>
+              <div class="tam-detail-row">
+                <div class="tam-detail-label">Instructions</div>
+                <div class="tam-detail-value" style="color: #475569; font-weight: 400;">1. Sit upright.<br>2. Reach both arms upward.<br>3. Pull down smoothly.</div>
+              </div>
+              <div class="tam-detail-row" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                <div class="tam-detail-label">Adaptations</div>
+                <div class="tam-detail-value" style="color: #475569; font-weight: 400;">Perform without band for less resistance.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — WHAT'S INCLUDED -->
+  <section class="tam-section">
+    <div class="tam-container">
+      <div class="tam-grid-2">
+        <div>
+          <h2>Everything you need to choose and use an activity.</h2>
+        </div>
+        <div>
+          <ul class="tam-check-list">
+            <li>35 curated activities</li>
+            <li>7 activity categories</li>
+            <li>Interactive activity selection</li>
+            <li>3 matching results</li>
+            <li>Detailed activity instructions</li>
+            <li>Adaptation guidance</li>
+            <li>Safety considerations</li>
+            <li>Professional and caregiver notes where applicable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — CATEGORIES -->
+  <section class="tam-section tam-section-bg-white">
+    <div class="tam-container">
+      <div class="tam-section-header">
+        <h2>Seven Activity Categories</h2>
+      </div>
+      <div class="tam-grid-3">
+        <div class="tam-card tam-center"><h3 style="margin: 0; font-size: 1.125rem;">Movement</h3></div>
+        <div class="tam-card tam-center"><h3 style="margin: 0; font-size: 1.125rem;">Balance & Coordination</h3></div>
+        <div class="tam-card tam-center"><h3 style="margin: 0; font-size: 1.125rem;">Cognition</h3></div>
+        <div class="tam-card tam-center"><h3 style="margin: 0; font-size: 1.125rem;">Fine Motor & Hand Skills</h3></div>
+        <div class="tam-card tam-center"><h3 style="margin: 0; font-size: 1.125rem;">Communication & Connection</h3></div>
+        <div class="tam-card tam-center"><h3 style="margin: 0; font-size: 1.125rem;">Daily Living & Independence</h3></div>
+        <div class="tam-card tam-center" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto;"><h3 style="margin: 0; font-size: 1.125rem;">Creative & Meaningful Engagement</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — WHO IT'S FOR -->
+  <section class="tam-section">
+    <div class="tam-container">
+      <div class="tam-section-header">
+        <h2>Built for real-world sessions and everyday support.</h2>
+      </div>
+      <div class="tam-grid-2" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="tam-card tam-center">
+          <h3 style="margin: 0; font-size: 1.125rem;">Physical Therapists</h3>
+        </div>
+        <div class="tam-card tam-center">
+          <h3 style="margin: 0; font-size: 1.125rem;">Occupational Therapists</h3>
+        </div>
+        <div class="tam-card tam-center">
+          <h3 style="margin: 0; font-size: 1.125rem;">Caregivers</h3>
+        </div>
+        <div class="tam-card tam-center">
+          <h3 style="margin: 0; font-size: 1.125rem;">Physical / Exercise Professionals</h3>
+        </div>
+      </div>
+      <p class="tam-center" style="margin-top: 32px; color: #64748b;">Providing practical everyday support for professionals and family caregivers.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 10 — REAL-LIFE USE CASES -->
+  <section class="tam-section tam-section-bg-white">
+    <div class="tam-container">
+      <div class="tam-section-header">
+        <h2>When you need an activity — without starting from scratch.</h2>
+      </div>
+      <div class="tam-grid-3">
+        <div class="tam-case-card">"I have 10 minutes."</div>
+        <div class="tam-case-card">"I need something seated."</div>
+        <div class="tam-case-card">"I have limited materials."</div>
+        <div class="tam-case-card">"I want a cognitive activity."</div>
+        <div class="tam-case-card">"I need something adaptable."</div>
+        <div class="tam-case-card">"I need something for a small group."</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11 — OFFER -->
+  <section class="tam-section tam-section-bg-navy">
+    <div class="tam-container">
+      <div class="tam-grid-2">
+        <div>
+          <h2 style="font-size: 2.5rem; margin-bottom: 16px;">Get The Activity Method™</h2>
+          <div style="font-size: 3rem; font-weight: 700; margin-bottom: 8px;">$35</div>
+          <p style="color: #cbd5e1; margin-bottom: 32px;">One-time payment.</p>
+          <a href="https://activity-method.systeme.io/checkout" class="tam-btn" style="background: #fff; color: #0A192F;">Get Instant Access — $35</a>
+          <span class="tam-microcopy" style="color: #94a3b8;">Secure checkout · One-time payment · 7-day refund policy</span>
+        </div>
+        <div>
+          <ul class="tam-check-list" style="color: #fff;">
+            <li style="color: #fff;">✓ Instant digital access</li>
+            <li style="color: #fff;">✓ 35 curated activities</li>
+            <li style="color: #fff;">✓ Interactive activity selection</li>
+            <li style="color: #fff;">✓ 3 matching results</li>
+            <li style="color: #fff;">✓ Detailed activity guidance</li>
+            <li style="color: #fff;">✓ Adaptation guidance</li>
+            <li style="color: #fff;">✓ 7-day refund policy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12 — FAQ -->
+  <section class="tam-section tam-section-bg-white">
+    <div class="tam-container">
+      <div class="tam-section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="tam-faq-grid">
+        <div class="tam-faq-item">
+          <h3>What is The Activity Method™?</h3>
+          <p>It is a practical activity-selection system that helps you find relevant activities based on who is participating, what they are working on, available time, and available materials.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>Who is it for?</h3>
+          <p>It is built for Physical Therapists, Occupational Therapists, Caregivers, Family Caregivers, and Physical/Exercise Professionals who work with older adults.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>Is this a physical product?</h3>
+          <p>No, it is an instant-access digital product.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>How does the activity finder work?</h3>
+          <p>You answer a few simple questions about your situation (participation, goal, time, materials) and the system provides 3 matches tailored to your needs.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>How many activities are included?</h3>
+          <p>The system includes 35 curated activities across 7 categories.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>Is this a subscription?</h3>
+          <p>No. It is a single one-time payment.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>How much does it cost?</h3>
+          <p>The price is $35.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>When do I get access?</h3>
+          <p>You receive instant digital access immediately after purchase.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>What is the refund policy?</h3>
+          <p>We offer a 7-day refund policy.</p>
+        </div>
+        <div class="tam-faq-item">
+          <h3>Is this medical advice?</h3>
+          <p>No. The Activity Method™ provides activity ideas and selection tools. It does not replace professional medical advice, diagnosis, or treatment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 13 — FINAL CTA -->
+  <section class="tam-section tam-center">
+    <div class="tam-container">
+      <h2 style="font-size: 3rem; margin-bottom: 16px;">Stop searching.<br>Start with the right activity.</h2>
+      <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto 32px;">A practical way to move from uncertainty to three relevant options.</p>
+      <a href="https://activity-method.systeme.io/checkout" class="tam-btn">Get Instant Access — $35</a>
+      <span class="tam-microcopy">One-time payment · Instant digital access · 7-day refund policy</span>
+    </div>
+  </section>
+</div>

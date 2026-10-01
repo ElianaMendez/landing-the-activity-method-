@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Activity Method™ - Preview</title>
+</head>
+<body style="margin: 0; padding: 0;">
+
+    <!-- ========================================== -->
+    <!-- PREVIEW ONLY: IMPORTING SYSTEME.IO CONTENT -->
+    <!-- ========================================== -->
+    <div id="preview-container"></div>
+    
+    <script>
+        // Fetch the fragment to preview it exactly as it will rendered
+        fetch('SYSTEMEIO_LANDING.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('preview-container').innerHTML = html;
+            })
+            .catch(err => {
+                console.error("Failed to load fragment. Make sure to open via a local server (e.g. VS Code Live Server) to bypass CORS.", err);
+                document.getElementById('preview-container').innerHTML = "<p style='padding:40px; color:red;'>Failed to load SYSTEMEIO_LANDING.html. You must run this using a local server because fetch() prevents loading local files via file:// protocol.</p>";
+            });
+    </script>
+
+</body>
+</html>
